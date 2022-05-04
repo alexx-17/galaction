@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "18164660506",
+    "project_id": "learn-now-c2566",
+    "storage_bucket": "learn-now-c2566.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18164660506:android:6db35e55073cf00e14d4a3",
+        "android_client_info": {
+          "package_name": "com.example.learn_now"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18164660506-f7eriar3g5if0k6bk654ua0ck43rl0dn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB81faO56_hkLTss69v9G2eMA4DfOKEiFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18164660506-f7eriar3g5if0k6bk654ua0ck43rl0dn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
