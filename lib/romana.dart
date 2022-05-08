@@ -8,9 +8,14 @@ class Romana extends StatelessWidget {
         body: SizedBox(
             width: double.infinity,
             child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  const Text(
+                    "Limba Romana",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
                   CupertinoButton.filled(
                     child: const Text("clasa a 5-a"),
                     disabledColor: const Color.fromARGB(255, 77, 148, 255),
@@ -108,7 +113,7 @@ class ThirdRoute extends StatelessWidget {
                 CupertinoButton(
                   child: const Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("Substantiv")),
+                      child: Text("Substantivul")),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -128,27 +133,25 @@ class FourthRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Limba Romana: clasa a 7-a'),
-      ),
-      body: Center(
-        child:Column(
-              //mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                CupertinoButton(
-                  child: const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Adjectiv")),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Adjectiv()),
-                    );
-                  },
-                ),
-              ],
-            ))); 
+        appBar: AppBar(
+          title: const Text('Limba Romana: clasa a 7-a'),
+        ),
+        body: Center(
+            child: Column(
+          //mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CupertinoButton(
+              child: const Align(
+                  alignment: Alignment.centerLeft, child: Text("Adjectivul")),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Adjectiv()),
+                );
+              },
+            ),
+          ],
+        )));
   }
 }
 
@@ -158,27 +161,25 @@ class FifthRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Limba Romana: clasa a 8-a'),
-      ),
-      body: Center(
-        child: Column(
-              //mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                CupertinoButton(
-                  child: const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Derivarea")),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Derivare()),
-                    );
-                  },
-                ),
-              ],
-            ))); 
+        appBar: AppBar(
+          title: const Text('Limba Romana: clasa a 8-a'),
+        ),
+        body: Center(
+            child: Column(
+          //mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CupertinoButton(
+              child: const Align(
+                  alignment: Alignment.centerLeft, child: Text("Derivarea")),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Derivare()),
+                );
+              },
+            ),
+          ],
+        )));
   }
 }
 
@@ -483,7 +484,10 @@ class Adjectiv extends StatelessWidget {
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("După proveniență:", style: TextStyle(fontWeight: FontWeight.bold),),
+            child: Text(
+              "După proveniență:",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             alignment: Alignment.centerLeft,
           ),
           const Align(
@@ -498,9 +502,14 @@ class Adjectiv extends StatelessWidget {
             child: Text("- provenit din verb la gerunziu: salcie plângândă"),
             alignment: Alignment.centerLeft,
           ),
-          const SizedBox(height: 5,),
+          const SizedBox(
+            height: 5,
+          ),
           const Align(
-            child: Text("După alcătuire", style: TextStyle(fontWeight: FontWeight.bold),),
+            child: Text(
+              "După alcătuire",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             alignment: Alignment.centerLeft,
           ),
           const Align(
@@ -511,21 +520,29 @@ class Adjectiv extends StatelessWidget {
             child: Text("- compuse: cuminte, roșu-închis"),
             alignment: Alignment.centerLeft,
           ),
-          const SizedBox(height: 5,),
+          const SizedBox(
+            height: 5,
+          ),
           const Align(
-            child: Text("După variabilitate", style: TextStyle(fontWeight: FontWeight.bold),),
+            child: Text(
+              "După variabilitate",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("- invariabile: turcoaz, siclam, ocru, ecru, ecosez, lila, crem, perspicace"),
+            child: Text(
+                "- invariabile: turcoaz, siclam, ocru, ecru, ecosez, lila, crem, perspicace"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("- variabile cu 4 forme flexionare (2 terminații): frumos/frumoasă/frumoși/frumoase"),
+            child: Text(
+                "- variabile cu 4 forme flexionare (2 terminații): frumos/frumoasă/frumoși/frumoase"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("- variabile cu 3 forme flexionare (2 terminații): mic, roșu + adjective terminate în:"),
+            child: Text(
+                "- variabile cu 3 forme flexionare (2 terminații): mic, roșu + adjective terminate în:"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
@@ -541,7 +558,8 @@ class Adjectiv extends StatelessWidget {
             alignment: Alignment.center,
           ),
           const Align(
-            child: Text("- 2 forme flexionare (2 terminații): vechi/veche, bălai/bălaie"),
+            child: Text(
+                "- 2 forme flexionare (2 terminații): vechi/veche, bălai/bălaie"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
@@ -550,7 +568,10 @@ class Adjectiv extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           const Align(
-            child: Text("Gradele de comparație ale adjectivului", style: TextStyle(fontWeight: FontWeight.bold),),
+            child: Text(
+              "Gradele de comparație ale adjectivului",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             alignment: Alignment.centerLeft,
           ),
           const Align(
@@ -562,7 +583,8 @@ class Adjectiv extends StatelessWidget {
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("   de egalitate: la fel de/tot așa de/tot atât de: la fel de cuminte"),
+            child: Text(
+                "   de egalitate: la fel de/tot așa de/tot atât de: la fel de cuminte"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
@@ -586,11 +608,13 @@ class Adjectiv extends StatelessWidget {
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("       de superioritate: cel/cea/cei/cele (articol demonstrativ adjectival) mai + adj: cel mai cuminte"),
+            child: Text(
+                "       de superioritate: cel/cea/cei/cele (articol demonstrativ adjectival) mai + adj: cel mai cuminte"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("       de inferioritate: cel/cea/cei/cele (articol demonstrativ adjectival) mai puțin+ adj: cel mai puțin cuminte"),
+            child: Text(
+                "       de inferioritate: cel/cea/cei/cele (articol demonstrativ adjectival) mai puțin+ adj: cel mai puțin cuminte"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
@@ -598,25 +622,27 @@ class Adjectiv extends StatelessWidget {
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("       de superioritate: foarte/tare/prea + adj: foarte cuminte"),
+            child: Text(
+                "       de superioritate: foarte/tare/prea + adj: foarte cuminte"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("       de inferioritate: foarte/tare/prea puțin + adj: foarte puțin cuminte"),
+            child: Text(
+                "       de inferioritate: foarte/tare/prea puțin + adj: foarte puțin cuminte"),
             alignment: Alignment.centerLeft,
           ),
         ]));
   }
 }
 
-class Derivare extends StatelessWidget{
+class Derivare extends StatelessWidget {
   const Derivare({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Adjectivul'),
+          title: const Text('Derivarea'),
         ),
         body: ListView(children: [
           const Align(
@@ -625,50 +651,74 @@ class Derivare extends StatelessWidget{
           ),
           const Align(
             child: Text(
-                "Derivarea = este mijlocul intern de îmbogățire a vocabularului, prin care se formează cuvinte noi prin adăugarea de sufixe sau prefixe unei rădăcini", style: TextStyle(fontWeight: FontWeight.bold),),
+              "Derivarea = este mijlocul intern de îmbogățire a vocabularului, prin care se formează cuvinte noi prin adăugarea de sufixe sau prefixe unei rădăcini",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             alignment: Alignment.centerLeft,
           ),
           const SizedBox(height: 5),
           const Align(
-            child: Text("Cuvântul de bază = elementul fundamental pentru cuvinte noi, iar rădăcina este alcătuită din sunetele comune cuvântului de bază și tuturor cuvintelor obținute de la acesta. Uneori acestea coincid (prieten, prietenie), dar cel mai adesea între cuvântul de bază și rădăcină există diferențe ( fată, fetiță).", style: TextStyle(fontWeight: FontWeight.bold),),
+            child: Text(
+              "Cuvântul de bază = elementul fundamental pentru cuvinte noi, iar rădăcina este alcătuită din sunetele comune cuvântului de bază și tuturor cuvintelor obținute de la acesta. Uneori acestea coincid (prieten, prietenie), dar cel mai adesea între cuvântul de bază și rădăcină există diferențe ( fată, fetiță).",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("Sufixele = sunetele sau grupurile de sunete adăugate după rădăcină pentru a forma cuvinte noi. Ele pot fi:", style: TextStyle(fontWeight: FontWeight.bold),),
+            child: Text(
+              "Sufixele = sunetele sau grupurile de sunete adăugate după rădăcină pentru a forma cuvinte noi. Ele pot fi:",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("   - lexicale, când creează cuvinte noi; de exemplu: ardelean, aurar, argintiu, bucătărie, cărțoi, degetar, dorință, pantofior, prietenește, zmeuriș;"),
+            child: Text(
+                "   - lexicale, când creează cuvinte noi; de exemplu: ardelean, aurar, argintiu, bucătărie, cărțoi, degetar, dorință, pantofior, prietenește, zmeuriș;"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("   - gramaticale, când creează forme gramaticale; de exemplu, sufixe de timp (-se pentru mai-mult-ca-perfect, cântasem), sufixul de infinitiv (-a din a cânta) etc.;"),
+            child: Text(
+                "   - gramaticale, când creează forme gramaticale; de exemplu, sufixe de timp (-se pentru mai-mult-ca-perfect, cântasem), sufixul de infinitiv (-a din a cânta) etc.;"),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("   - lexico-gramaticale, când exprimă, simultan, un sens nou și o categorie gramaticală (de exemplu, lucrare, verb la infinitivul lung lucrat, participiu."),
+            child: Text(
+                "   - lexico-gramaticale, când exprimă, simultan, un sens nou și o categorie gramaticală (de exemplu, lucrare, verb la infinitivul lung lucrat, participiu."),
             alignment: Alignment.centerLeft,
           ),
-          const SizedBox(height: 5,),
-          const Align(
-            child: Text("Sufixele pot forma substantive (tinerime), verbe (pietrui), adjective (argintiu), adverbe (târâș), pronume (mătălică) sau interjecții (aolică)."),
-            alignment: Alignment.centerLeft,
+          const SizedBox(
+            height: 5,
           ),
           const Align(
-            child: Text("Prefixele = Prefixele sunt sunetele sau grupurile de sunete adăugate înaintea rădăcinii, pentru a forma cuvinte noi; de exemplu: neșansă, ineficient, descumpăni, dezordine, deparazita, răsciti, reaminti.", style: TextStyle(fontWeight: FontWeight.bold),),
-            alignment: Alignment.centerLeft,
-          ),
-          const Align(
-            child: Text("Prefixele pot forma substantive (necredință), verbe (a înmulți, a reaminti), adjective (străvechi), adverbe (negreșit)."),
-            alignment: Alignment.centerLeft,
-          ),
-          const SizedBox(height: 5,),
-          const Align(
-            child: Text("Derivatele parasintetice sunt formate în același timp cu un sufix și cu un prefix (a închipui).", style: TextStyle(fontWeight: FontWeight.bold),),
+            child: Text(
+                "Sufixele pot forma substantive (tinerime), verbe (pietrui), adjective (argintiu), adverbe (târâș), pronume (mătălică) sau interjecții (aolică)."),
             alignment: Alignment.centerLeft,
           ),
           const Align(
-            child: Text("Seriile derivative se formează atunci când baza unui cuvânt derivat este un alt cuvânt derivat (țară + sufixul de origine -an → țăran + sufixul moțional -că → țărancă + sufixul diminutival -uță → țărăncuță)."),
+            child: Text(
+              "Prefixele = Prefixele sunt sunetele sau grupurile de sunete adăugate înaintea rădăcinii, pentru a forma cuvinte noi; de exemplu: neșansă, ineficient, descumpăni, dezordine, deparazita, răsciti, reaminti.",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            alignment: Alignment.centerLeft,
+          ),
+          const Align(
+            child: Text(
+                "Prefixele pot forma substantive (necredință), verbe (a înmulți, a reaminti), adjective (străvechi), adverbe (negreșit)."),
+            alignment: Alignment.centerLeft,
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          const Align(
+            child: Text(
+              "Derivatele parasintetice sunt formate în același timp cu un sufix și cu un prefix (a închipui).",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            alignment: Alignment.centerLeft,
+          ),
+          const Align(
+            child: Text(
+                "Seriile derivative se formează atunci când baza unui cuvânt derivat este un alt cuvânt derivat (țară + sufixul de origine -an → țăran + sufixul moțional -că → țărancă + sufixul diminutival -uță → țărăncuță)."),
             alignment: Alignment.centerLeft,
           ),
           Image.asset('assets/images/serii.jpg')
